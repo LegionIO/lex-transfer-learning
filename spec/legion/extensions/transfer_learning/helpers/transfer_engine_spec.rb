@@ -221,7 +221,7 @@ RSpec.describe Legion::Extensions::TransferLearning::Helpers::TransferEngine do
       5.times do |i|
         name = :"domain_#{i}"
         engine.learn_domain(domain: name, amount: 0.5)
-        engine.set_similarity(domain_a: name, domain_b: :target, similarity: 0.7 + i * 0.01)
+        engine.set_similarity(domain_a: name, domain_b: :target, similarity: 0.7 + (i * 0.01))
       end
       result = engine.most_transferable(target_domain: :target, limit: 3)
       expect(result.size).to be <= 3

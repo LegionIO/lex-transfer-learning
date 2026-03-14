@@ -59,6 +59,6 @@ Naming/FileName:
 Naming/PredicateMethod:
   Enabled: false
 
-RSpec/OneClassPerFile:
+Style/OneClassPerFile:
   Exclude:
     - 'spec/spec_helper.rb'
